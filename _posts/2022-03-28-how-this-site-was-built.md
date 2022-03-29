@@ -8,64 +8,64 @@ Yet another personal site built on Github Pages with jekyll was born. This is an
 
 #### Step #1: Create a repository 
 
-Create a public Github repository named username.github.io and clone it to local, which for me is toonoisy.github.io, also as my default domain
+Create a public Github repository named username.github.io and clone it to local, which for me is toonoisy.github.io, also as my default domain.
 
 #### Step #2: Install Ruby and Jekyll
 
 - Install Ruby via Homebrew on macOs, or other available methods on [their website](https://www.ruby-lang.org/en/documentation/installation)
 
-```shell
-brew install ruby
-```
+  ```shell
+  brew install ruby
+  ```
 
 - Install Jekyll gem
 
-```shell
-gem install jekyll bundler
-```
+  ```shell
+  gem install jekyll bundler
+  ```
 
 #### Step #3: Generate a Jekyll site and build it locally
 
 - Run below at the local repository folder
 
-```shell
-jekyll new . --force
-```
+  ```shell
+  jekyll new . --force
+  ```
 
-- Build it locally, then check http://127.0.0.1:4000/
+- Build it locally, then go check http://127.0.0.1:4000/
 
-```shell
-bundle exec jekyll serve
-```
+  ```shell
+  bundle exec jekyll serve
+  ```
 
 #### Step #4: Add a theme
 
 - Where to find free Jekyll themes
 
-  - http://jekyllthemes.org/
+  - [http://jekyllthemes.org/](http://jekyllthemes.org/)
 
-  - https://jekyll-themes.com/free/
+  - [https://jekyll-themes.com/free/](https://jekyll-themes.com/free/)
 
-  - https://jamstackthemes.dev/#ssg=jekyll
+  - [https://jamstackthemes.dev/#ssg=jekyll](https://jamstackthemes.dev/#ssg=jekyll)
 
-I made my pick: http://jekyllthemes.org/themes/no-style-please/
+  I made my pick: [http://jekyllthemes.org/themes/no-style-please/](http://jekyllthemes.org/themes/no-style-please/)
 
 - Theme installation and usage
 
-Follow the author's README.md, it normally explained everything. But still I made a mistake in my *_config.yml* due to careless, which caused deployment failure later: 
+  Follow the author's README.md, it normally explained everything. But still I made a mistake in my *_config.yml* due to careless, which caused deployment failure later: 
 
-​	For the line to specify theme name, if it was one of Github Pages' "[supported themes](https://pages.github.com/themes/)", you may type `theme: THEME-NAME`, but for any other themes, you need to type `remote_theme: AUTHOR-NAME/THEME-NAME`, so the correct config for me was `remote_theme: riggraz/no-style-please`, instead of `theme: no-style-please`
+  For the line to specify theme name, if it was one of Github Pages' "[supported themes](https://pages.github.com/themes/)", you may type `theme: THEME-NAME`, but for any other themes, you need to type `remote_theme: AUTHOR-NAME/THEME-NAME`, so the correct config for me was `remote_theme: riggraz/no-style-please`, instead of `theme: no-style-please`.
 
 #### Step #5: Time to make content
 
 - Add content on a markdown file named "*YYYY-MM-DD-NAME-OF-POST*", which must contain a YAML frontmatter for example as below
 
-```
-layout: post
-title:  type-your-post-title-here
-date: YYYY-MM-DD hh:mm:ss -0000
-categories: your-category-which-is-optional	
-```
+  ```
+  layout: post
+  title:  type-your-post-title-here
+  date: YYYY-MM-DD hh:mm:ss -0000
+  categories: your-category-which-is-optional	
+  ```
 
 - Add the file to *_posts* folder, rebuild it locally to check the changes
 
