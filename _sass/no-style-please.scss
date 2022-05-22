@@ -1,33 +1,15 @@
-// -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-  filter: invert(1);
-  img {
-    filter: invert(1);
-
-    &.ioda { filter: invert(0); }
-  }
-}
-
-body[a="dark"] { @include dark-appearance; }
-
-
-@media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
-}
-// -------------------------------------------- //
-
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
-html, body { background: #ecf0f1; }
+html, body { background: #282C34; }
 
 html { height: 100%; }
 
 body {
-  color: black;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 1.4;
+  color: #d0d5df;
+  font-family: Menlo;
+  font-size: 14px;
+  line-height: 1.5;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
@@ -36,6 +18,11 @@ body {
 .post-meta { text-align: right; }
 
 h2, h3, h4, h5, h6 { margin-top: 3rem; }
+
+a {
+  color: #fff; 
+  text-decoration: underline 2px #fdb54a;
+}
 
 hr { margin: 2rem 0; }
 
@@ -62,14 +49,16 @@ hr {
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid black;
+  border: 1px solid #d0d5df;
   border-collapse: collapse;
-  padding: 0.4rem;
+  padding: 0.5rem;
 }
 
 code {
-  color: white;
-  background: black;
+  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  background: #373C47;
+  padding: 0 5px;
+  border-radius: 5px;
 }
 
 div.highlighter-rouge code {
@@ -81,7 +70,7 @@ div.highlighter-rouge code {
 
 blockquote {
   font-style: italic;
-  border: thin solid black;
+  border-left: 5px solid #373C47;
   padding: 1rem;
 
   p { margin: 0; }
