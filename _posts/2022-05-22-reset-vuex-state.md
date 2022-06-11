@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 重置 Vuex 中的 state 对象
+title: Vuex 重置 state 对象
 date: 2022-05-22 18:49
 categories: vuex
 ---

@@ -32,7 +32,7 @@ Create a public Github repository named username.github.io and clone it to local
   jekyll new . --force
   ```
 
-- Build it locally, then go check http://127.0.0.1:4000/
+- Build it locally, then go check [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 
   ```shell
   bundle exec jekyll serve

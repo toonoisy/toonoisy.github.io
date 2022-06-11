@@ -106,7 +106,7 @@ export default {
 <input v-model="form.str" />
 ```
 
-## 3. References
+## 3. References
 
 - [深入响应式原理](https://cn.vuejs.org/v2/guide/reactivity.html)
 - [表单输入绑定](https://cn.vuejs.org/v2/guide/forms.html)
