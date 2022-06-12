@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 项目中的 main.js 文件是什么
+title: Vue 基础篇：main.js 文件是什么
 date: 2022-06-01 20:30
 categories: vue
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: macOS 系统下 V2Ray 搭建笔记
+title: macOS 搭建 V2Ray 笔记
 date: 2022-06-11 22:45
 categories: v2ray
 ---
@@ -12,6 +12,8 @@ categories: v2ray
 ## 什么是 V2Ray
 
 简单理解，V2Ray 是一个用来实现网络交互，处理网络数据的工具，也是 [Project V](https://www.v2ray.com/) 的核心工具，而 Project V 是一个网络环境构建工具集合。
+
+V2Ray 的开发主要使用 Go 语言。
 
 ## 准备 VPS
 
@@ -30,7 +32,7 @@ categories: v2ray
 
 全部选好之后点击右下方 Deploy New 创建服务器实例，过程需要等待几分钟，实例创建完成后，即可进入详情页查看服务器 IP 、账号密码和其余详情。
 
-此时先试 IP 能否 ping 通，再通过[在线工具](http://port.ping.pe/)测试是否被 TCP 阻断，如果 USA 地区链接正常，China 地区链接失败，说明遇到了 TCP 阻断。如遇问题可删除实例，重新创建。
+此时先试 IP 能否 ping 通，再通过[在线工具](http://port.ping.pe/)测试是否被 TCP 阻断，如果美国地区连接正常，国内地区连接失败，说明遇到了 TCP 阻断。如遇问题可删除实例，重新创建。
 
 ## 配置 V2Ray
 
@@ -54,13 +56,15 @@ bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/go.sh)
 
 显示以下信息代表配置成功，可按提示生成 url 或二维码，配置客户端时使用：
 
-![v2ray-config-success](https://cdn.jsdelivr.net/gh/toonoisy/img-hosting/blog/v2ray-config-success.jpg)
+![v2ray-config-success](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-config-success.jpg)
 
 刚才执行的脚本自动安装了 [BBR 加速](https://cloud.google.com/blog/products/networking/tcp-bbr-congestion-control-comes-to-gcp-your-internet-just-got-faster)，可执行以下命令查看，有返回则代表 BBR 运行成功：
 
 ```shell
 lsmod | grep bbr
 ```
+
+全部完成后输入 `exit` 退出服务器即可。
 
 ### V2Ray 命令
 
@@ -95,11 +99,11 @@ v2ray uninstall # 卸载 V2Ray
 
 安装成功后，点击顶部栏图标，选择 Configure 进入配置界面，即可手填或导入配置：
 
-![v2ray-client-config](https://cdn.jsdelivr.net/gh/toonoisy/img-hosting/blog/v2ray-client-config.jpg)
+![v2ray-client-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.jpg)
 
 最省事的导入方法选 “Import from standard share links”，把之前生成的 vmess url 拷贝粘贴进去确认即可，有机率会导入失败，可以多试几次。
 
-![v2ray-client-config-import](https://cdn.jsdelivr.net/gh/toonoisy/img-hosting/blog/v2ray-client-config-import.jpg)
+![v2ray-client-config-import](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.jpg)
 
 成功后可在 Server 选项中看到刚才添加的配置，此时选择偏好的代理模式，点击 Load core 连接后即可畅游互联网。
 

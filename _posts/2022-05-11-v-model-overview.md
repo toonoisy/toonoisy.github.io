@@ -5,13 +5,13 @@ date: 2022-05-11 22:59
 categories: vue
 ---
 
-## 0. Vue 的响应式原理回顾
+## Vue 的响应式原理回顾
 
 Vue 使用 [`Object.defineProperty`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 为所有在 `data` 选项中声明的属性遍历添加 [getter/setter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#定义_getters_与_setters)，使其能在被访问或修改时通知组件对应的 `watcher` 实例。在组件进行渲染时，`watcher` 会将接触过的数据收集为依赖，之后当依赖项的 `setter` 触发时， `watcher` 收到通知就会重新渲染组件，从而实现数据和视图双向同步。
 
-## 1. Vue2 官方文档中对 v-model 的介绍
+## Vue2 官方文档中对 v-model 的介绍
 
-### 1.1 表单元素双向数据绑定
+### 1. 表单元素双向数据绑定
 
 > 你可以用 `v-model` 指令在表单 `<input>`、`<textarea>` 及 `<select>` 元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但 `v-model` 本质上不过是语法糖。它负责监听用户的输入事件以更新数据，并对一些极端场景进行一些特殊处理。
 
@@ -28,7 +28,7 @@ Vue 使用 [`Object.defineProperty`](https://developer.mozilla.org/zh-CN/docs/We
 <input :value="str" @input="str = $event.target.value"/>
 ```
 
-### 1.2 在组件上使用 v-model
+### 2. 在组件上使用 v-model
 
 > 一个组件上的 `v-model` 默认会利用名为 `value` 的 prop 和名为 `input` 的事件，但是像单选框、复选框等类型的输入控件可能会将 `value` attribute 用于[不同的目的](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Value)。`model` 选项可以用来避免这样的冲突。
 
@@ -92,7 +92,7 @@ export default {
 </script>
 ```
 
-## 2. v-model 还有什么特点
+## v-model 还有什么特点
 
 如下代码中，`form` 是一个在 `data` 中初始声明的对象，`str` 是一个未声明的属性。由于 Vue 不能检测数组和对象的变化，所以在 `input` 方法中使用了 `$set` 方法为 `form` 添加响应式 property。
 
@@ -106,7 +106,7 @@ export default {
 <input v-model="form.str" />
 ```
 
-## 3. References
+## References
 
 - [深入响应式原理](https://cn.vuejs.org/v2/guide/reactivity.html)
 - [表单输入绑定](https://cn.vuejs.org/v2/guide/forms.html)

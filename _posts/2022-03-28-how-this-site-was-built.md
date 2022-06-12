@@ -4,15 +4,15 @@ title: how this site was built
 date: 2022-03-30 01:59
 ---
 
-Yet another personal site built on Github Pages with jekyll was born. This is an article about how I created this site step by step.
+Yet another personal site built on GitHub Pages with jekyll was born. This is an article about how I created this site step by step.
 
 #### Step #1: Create a repository 
 
-Create a public Github repository named username.github.io and clone it to local, which for me is toonoisy.github.io, also as my default domain.
+Create a public GitHub repository named username.github.io and clone it to local, which for me is toonoisy.github.io, also as my default domain.
 
 #### Step #2: Install Ruby and Jekyll
 
-- Install Ruby via Homebrew on macOs, or other available methods on [their website](https://www.ruby-lang.org/en/documentation/installation)
+- Install Ruby via Homebrew on macOS, or other available methods on [their website](https://www.ruby-lang.org/en/documentation/installation)
 
   ```shell
   brew install ruby
@@ -52,9 +52,9 @@ Create a public Github repository named username.github.io and clone it to local
 
 - Theme installation and usage
 
-  Follow the author's README.md, it normally explained everything. But still I made a mistake in my *_config.yml* due to careless, which caused deployment failure later: 
+  Follow the author's README.md, it normally explained everything. But still I made a careless mistake in my *_config.yml*, which caused deployment failure later: 
 
-  For the line to specify theme name, if it was one of Github Pages' "[supported themes](https://pages.github.com/themes/)", you may type `theme: THEME-NAME`, but for any other themes, you need to type `remote_theme: AUTHOR-NAME/THEME-NAME`, so the correct config for me was `remote_theme: riggraz/no-style-please`, instead of `theme: no-style-please`.
+  For the line to specify theme name, if it was one of GitHub Pages' "[supported themes](https://pages.GitHub.com/themes/)", you may type `theme: THEME-NAME`, but for any other themes, you need to use `remote_theme: AUTHOR-NAME/THEME-NAME`, so the correct config for me was `remote_theme: riggraz/no-style-please`, instead of `theme: no-style-please`.
 
 #### Step #5: Time to make content
 
@@ -69,19 +69,17 @@ Create a public Github repository named username.github.io and clone it to local
 
 - Add the file to *_posts* folder, rebuild it locally to check the changes
 
-#### Step #6: Build on Github Pages
+#### Step #6: Build on GitHub Pages
 
-Add, commit, and push, then leave the rest to Github Pages! Yet things didn't happen as I expected first...
+Add, commit, and push, then leave the rest to GitHub Pages! Yet things didn't happen as I expected first...
 
 #### Plus Step #7: Troubleshooting
 
-After resolving the cause of deployment failure mentioned above, I was finally able to access my site online, but I noticed that my posts weren't showing up at all.
+After sorting out the deployment failure mentioned above, I was finally able to access my site online, but with my posts weren't showing up at all.
 
-I checked several relevent issues and answers on Google results, mostly said the problem was with ungitignored folders, for example `vendor`, which was not applicable to my case.
+I checked several relevent issues and answers on Google, mostly said the problem was with un-gitignored folders, for example *vendor*, which was not applicable to my case.
 
-这时候终于想起我的母语来了，于是去中文社区查了一圈，看到有类似经历的人提醒 “Jekyll是不会构建**未来日期**的文章的！”
+Eventually I realized that ***Jekyll would not build future dated posts by default***. My VPN stayed on during the whole process, but I was using my local time and date on the posts, therefore they were considered to be future dated and excluded from the build.
 
-So I finally realized that ***Jekyll would not build posts with a future date by default***. My VPN stayed connected while I was configuring my project, but I still used my local time and date on post files, therefore my posts were identified as being from the future and excluded from the build.
-
-After using `future: true` in my _config.yml to tell Jekyll to publish future posts, the problem was settled.
+After adding `future: true` in my *_config.yml* to allow future posts, the problem was solved.
 
