@@ -5,7 +5,7 @@ date: 2022-06-12 19:02
 ---
 ## 前言
 
-即便是像个人博客这样的小型站点，经过长期经营也会累积不少静态资源，尤其以博文图片为主。使用 Github + jsDelivr + PicGo 搭建一个免费图床，不仅可以解决大体积静态资源存储的问题，还优化了网站资源访问速度。
+博客长期经营下去，势必会累计不少博文配图，使用 Github + jsDelivr + PicGo 搭建一个免费图床，不仅可以解决大体积静态资源存储的问题，还优化了网站资源访问速度。
 
 ## jsDelivr 介绍
 
@@ -95,6 +95,5 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 - [Github+jsDelivr+PicGo 打造稳定快速、高效免费图床](https://blog.csdn.net/qq_36759224/article/details/98058240)
 - [免费CDN：jsDelivr+Github 使用方法](https://blog.csdn.net/qq_36759224/article/details/86936453)
-
 - [利用jsDelivr白嫖全球超高速静态资源访问服务！](https://www.bilibili.com/read/cv4297993)
 - [How Does a CDN Work?](https://www.cdnetworks.com/web-performance-blog/how-content-delivery-networks-work/)

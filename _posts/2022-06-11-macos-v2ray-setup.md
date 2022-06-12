@@ -20,11 +20,8 @@ V2Ray 的开发主要使用 Go 语言。
 选了简中互联网上呼声较高的 VPS 提供商 [Vultr](vultr.com)，创建账号登陆后进入 Products 标签页，点击右侧蓝色 + 号即可选购服务器（PS: 看到线上的教程说点击活动链接注册可冲10刀送100刀，也许是活动过期了，总之我没拿到赠额。）：
 
 - **Choose Server**：选择 Cloud Compute（云计算）
-
 - **CPU & Storage Technology**：要最便宜的就选 Regular Performance（普通性能）
-
 - **Server Location**：机房位置离得越近延迟越短，但拿到被 ban 的 IP 的机率也更大
-
 - **Server Image**：第一项 **Operating System**（操作系统）选了 Centos8 Stream ×64+，其余项非必需
 - **Server Size**：服务器大小，最便宜的每月5刀
 - **Add Auto Backups**：是否自动备份，每月收取服务器费用的1/5
@@ -43,7 +40,7 @@ V2Ray 的开发主要使用 Go 语言。
 以 macOS 为例，在终端执行：
 
 ```shell
-ssh -l urusename uripaddress # ssh -l 后输入服务器账号和 IP
+ssh -l username serveraddress # ssh -l 后输入服务器账号和 IP
 ```
 
 再按提示输入密码，执行连接，如果多次提示连接失败，可删除服务器新建一个再试。
