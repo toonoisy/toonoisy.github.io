@@ -5,11 +5,11 @@ date: 2022-06-12 19:02
 ---
 ## 前言
 
-博客长期经营下去，势必会累计不少博文配图，使用 Github + jsDelivr + PicGo 搭建一个免费图床，不仅可以解决大体积静态资源存储的问题，还优化了网站资源访问速度。
+拿自己写博客来说，博客长期经营下去，会不可避免地累积一些博文配图，使用 Github + jsDelivr + PicGo 搭建一个免费图床，不仅可以对这些图片资源进行专门管理，还能够优化网站资源访问速度。
 
 ## jsDelivr 介绍
 
-[jsDelivr](https://www.jsdelivr.com/) 是一款免费的开源 CDN 服务，目前支持 npm、GitHub、WordPress 三个站点的资源访问加速，在包括中国大陆以内的全球范围内拥有超过750个节点。
+[jsDelivr](https://www.jsdelivr.com/) 是一款免费的开源 CDN 服务，目前支持 npm、GitHub、WordPress 三个站点的资源访问加速，在全球范围内（含中国大陆）拥有超过750个节点。
 
 jsDelivr 有多种访问资源的方式，以访问 GitHub 为例：
 
@@ -20,7 +20,7 @@ https://cdn.jsdelivr.net/gh/user/repo@version/file
 // 加载某个具体的版本，如下加载了 jQuery 3.2.1版本
 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js
 
-// 使用某个范围内的版本，而非某个特点版本
+// 使用某个范围内的版本，而非某个定版本
 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js
 https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js
 
@@ -89,7 +89,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 有多个 releases 的时候就可以按版本区别资源了，即使有资源后续被删除，也可以通过旧版本号访问。
 
-该方案适合资源频繁更新的项目，如果仅存放几乎不需要更新的静态资源，如此操作反而繁琐。
+该方案适合资源频繁更新的项目，如果仅存放几乎不需要更新的静态资源，通常不需要如此繁琐的操作。
 
 ## References
 

@@ -5,7 +5,10 @@ date: 2022-05-22 18:49
 categories: vuex
 ---
 ```js
-// Declare a function instead of a variable to get a "clean" object everytime we call it
+/*
+  Declare a function to get a "clean" object when called
+  This is similar to why Vue component data option must be a function instead of an object
+*/
 const getDefaultState = () => {
   return {
     id: '',
@@ -38,4 +41,5 @@ export default {
 }
 ```
 
-**Source:** **[How to clear state in vuex store?](https://stackoverflow.com/questions/42295340/how-to-clear-state-in-vuex-store)**
+**source: [How to clear state in vuex store?](https://stackoverflow.com/questions/42295340/how-to-clear-state-in-vuex-store), with additional comments added.**
+
