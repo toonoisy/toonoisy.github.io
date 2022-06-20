@@ -1,13 +1,37 @@
+// user-defined colors
+$bodyBackground: #ecf0f1;
+$fontColor: #333;
+$codeBackground: initial;
+$inlineCodeBackground: #ddd;
+$headingColor: #222;
+$borderColor: #d0d5df;
+
+@mixin dark-appearance {
+  filter: invert(1);
+  img {
+    filter: invert(1);
+
+    &.ioda { filter: invert(0); }
+  }
+}
+
+body[theme="dark"] { @include dark-appearance; }
+
+
+@media (prefers-color-scheme: dark) {
+  body[theme="auto"] { @include dark-appearance; }
+}
+
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
-html, body { background: #282C34; }
+html, body { background: $bodyBackground; }
 
 html { height: 100%; }
 
 body {
-  color: #d0d5df;
-  font-family: Menlo;
+  color: $fontColor;
+  font-family: monospace;
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
@@ -17,11 +41,11 @@ body {
 
 .post-meta { text-align: right; }
 
-h2, h3, h4, h5, h6 { margin-top: 3rem; }
+h1 { color: $headingColor }
 
-a {
-  color: #fff; 
-  text-decoration: underline 2px #fdb54a;
+h2, h3, h4, h5, h6 { 
+  margin-top: 3rem; 
+  color: $headingColor;
 }
 
 hr { margin: 2rem 0; }
@@ -30,7 +54,6 @@ p { margin: 1rem 0; }
 
 li { margin: 0.5rem 0; }
 
-*:target { background: yellow; }
 
 .w {
   max-width: 650px;
@@ -49,16 +72,20 @@ hr {
 table { width: 100%; }
 
 table, th, td {
-  border: 1px solid #d0d5df;
+  border: 1px solid $borderColor;
   border-collapse: collapse;
   padding: 0.5rem;
 }
 
-code {
-  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-  background: #373C47;
-  padding: 0 5px;
+pre, code {
+  font-family: Consolas, Monaco,'Andale Mono', 'Ubuntu Mono', monospace;
+  background: $codeBackground;
   border-radius: 5px;
+}
+
+code.language-plaintext {
+  padding: 0 5px;
+  background: $inlineCodeBackground;
 }
 
 div.highlighter-rouge code {
@@ -66,11 +93,13 @@ div.highlighter-rouge code {
   overflow-x: auto;
   white-space: pre-wrap;
   padding: 1rem;
+  color: $inlineCodeBackground;
+  border-radius: 5px;
 }
 
 blockquote {
   font-style: italic;
-  border-left: 5px solid #373C47;
+  border-left: 5px solid $inlineCodeBackground;
   padding: 1rem;
 
   p { margin: 0; }

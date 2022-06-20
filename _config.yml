@@ -4,7 +4,6 @@ email: toonoisy@outlook.com # email of site's author
 url: https://toonoisy.github.io # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
-  Obsessed with the feeling of getting shit done, so I'm keeping a record of (a small part of) the daily shit I handle, plus half-assed technical notes.
 permalink: /:slug.html
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)

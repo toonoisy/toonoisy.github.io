@@ -2,7 +2,10 @@
 layout: default
 ---
 <header>
-  <h1>{{ site.title }}</h1>
+  <h1>
+    {{ site.title }}
+    <a href="javascript:;" class="toggler">⌥</a>
+  </h1>
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
@@ -11,3 +14,13 @@ layout: default
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
+
+<script>
+  function toggleTheme () {
+    const toggle = document.body.getAttribute('theme') === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', toggle);
+    document.body.setAttribute('theme', toggle);
+  };
+
+  document.querySelector('.toggler').addEventListener('click', toggleTheme);
+</script>

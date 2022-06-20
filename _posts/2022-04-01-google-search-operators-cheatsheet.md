@@ -1,6 +1,6 @@
 ---
 layout: post
-title: google search operators cheatsheet
+title: Google Search Operators Cheatsheet
 date: 2022-04-01 19:04
 ---
 

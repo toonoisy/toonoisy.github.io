@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vuex 重置 state 对象
+title: Reset Vuex State
 date: 2022-05-22 18:49
 categories: vuex
 ---
@@ -41,5 +41,5 @@ export default {
 }
 ```
 
-**source: [How to clear state in vuex store?](https://stackoverflow.com/questions/42295340/how-to-clear-state-in-vuex-store), with additional comments added.**
+**source: [How to clear state in vuex store?](https://stackoverflow.com/questions/42295340/how-to-clear-state-in-vuex-store), with minor additional comments added.**
 

@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: "en" }}">
   {%- include head.html -%}
-  <body a="{{ site.theme_config.appearance | default: "auto" }}">
+  <body theme="{{ site.theme_config.appearance | default: "light" }}">
+    <!-- light/dark mode: avoid flickering on reload -->
+    <script>
+      const local = localStorage.getItem('theme');
+      if (local) document.body.setAttribute('theme', local);
+    </script>
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}

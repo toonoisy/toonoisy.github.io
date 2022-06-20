@@ -1,6 +1,6 @@
 ---
 layout: post
-title: how this site was built
+title: How This Site Was Built
 date: 2022-03-30 01:59
 ---
 
