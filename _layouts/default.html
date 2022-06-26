@@ -3,10 +3,8 @@
   {%- include head.html -%}
   <body theme="{{ site.theme_config.appearance | default: "light" }}">
     <!-- light/dark mode: avoid flickering on reload -->
-    <script>
-      const local = localStorage.getItem('theme');
-      if (local) document.body.setAttribute('theme', local);
-    </script>
+    <script type="text/javascript" src="../assets/js/theme_switch.js" /></script>
+    <script>setTheme();</script>
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}

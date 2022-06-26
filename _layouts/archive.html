@@ -6,6 +6,10 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
+{% if page.which_category %}
+  {%-include post_list.html category=page.which_category-%}
+{% else %}
+
 {% for post in site.posts %}
 
 {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -31,3 +35,5 @@ layout: default
 {% capture prev_year %}{{ year }}{% endcapture %}
 
 {% endfor %}
+
+{% endif %}
