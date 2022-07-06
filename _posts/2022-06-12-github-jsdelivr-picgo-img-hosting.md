@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Github + jsDelivr + PicGo 搭建图床笔记
+title: Github + jsDelivr + PicGo 搭建图床
 date: 2022-06-12 19:02
 ---
 ## 前言

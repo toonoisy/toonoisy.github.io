@@ -1,6 +1,6 @@
 ---
 layout: post
-title: macOS 搭建 V2Ray 笔记
+title: macOS 搭建 V2Ray
 date: 2022-06-11 22:45
 categories: v2ray
 ---
@@ -17,7 +17,7 @@ V2Ray 的开发主要使用 Go 语言。
 
 ## 准备 VPS
 
-选了简中互联网上呼声较高的 VPS 提供商 [Vultr](vultr.com)，创建账号登陆后进入 Products 标签页，点击右侧蓝色 + 号即可选购服务器（PS: 看到线上的教程说点击活动链接注册可冲10刀送100刀，也许是活动过期了，总之我没拿到赠额。）：
+选了简中互联网上呼声较高的 VPS 提供商 [Vultr](https://vultr.com)，创建账号登陆后进入 Products 标签页，点击右侧蓝色 + 号即可选购服务器（PS: 看到线上的教程说点击活动链接注册可冲10刀送100刀，也许是活动过期了，总之我没拿到赠额。）：
 
 - **Choose Server**：选择 Cloud Compute（云计算）
 - **CPU & Storage Technology**：要最便宜的就选 Regular Performance（普通性能）

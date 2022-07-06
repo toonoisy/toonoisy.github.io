@@ -4,22 +4,13 @@
 entries:
   - title: info
     entries:
-      - title: theo && intj && seeker && learner && coder
       - title: about
         url: about
 
-  - title: recent posts
+  - title: posts
     post_list:
       limit: 10
       show_more: true
-      show_more_text: See archive...
+      show_more_text: see archive...
       show_more_url: archive.html
-
-  - title: leetcoding
-    post_list:
-      limit: 5
-      category: leetcoding
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: leetcoding-archive.html
   
