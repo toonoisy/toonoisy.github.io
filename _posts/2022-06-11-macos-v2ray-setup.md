@@ -90,7 +90,7 @@ v2ray uninstall # 卸载 V2Ray
 
 ### 获取安装
 
-获取 MacOS V2Ray 客户端：[https://github.com/Cenmrev/V2RayX/releases](https://github.com/Cenmrev/V2RayX/releases)
+获取 macOS V2Ray 客户端：[https://github.com/Cenmrev/V2RayX/releases](https://github.com/Cenmrev/V2RayX/releases)
 
 ### 添加服务器配置
 

@@ -1,46 +1,51 @@
 ---
 layout: post
-title: JS Date and Time Manipulation Examples
+title: Date Manipulation in JS
 date: 2022-07-06 23:12
 ---
 ### Create a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object
 
 ```js
 new Date()
-// or with a specific value
+// with a specific value
 new Date(1640010554086)
 new Date('7/5/2022, 7:44:47 PM')
 new Date('2021-12-20T14:29:14.086Z')
-new Date(1970, 0, 1, 0, 0, 0) // refers to 2/1/1970, 12:00:00 AM
+new Date(1970, 0, 1, 0, 0, 0) // refers to 1/1/1970, 00:00:00 AM
 ```
 
-### Get a timestamp of current moment in milliseconds 
+### Get a timestamp of current moment (in milliseconds)
 
 ```js
 Date.now()
 ```
 
-### Get a string of current moment
+### Get a timestamp of the first moment of current day
 
 ```js
-// weekday + date + time + timezone
+new Date().setHours(0, 0, 0, 0)
+```
+
+### Get a string of current moment (weekday + date + time + timezone)
+
+```js
 Date() 
 // or
 new Date().toString()
 ```
 
-### Get strings in different formats
+### Get strings in different formats out of an Date object
 
 ```js
-Date.prototype.toString()
-Date.prototype.toDateString()
-Date.prototype.toTimeString()
-Date.prototype.toLocaleString()
-Date.prototype.toLocaleDateString()
-Date.prototype.toLocaleTimeString()
-Date.prototype.toUTCString()
-Date.prototype.toISOString() // YYYY-MM-DDTHH:mm:ss.sssZ or ±YYYYYY-MM-DDTHH:mm:ss.sssZ
-Date.prototype.toJSON()
+new Date().toString()
+new Date().toDateString()
+new Date().toTimeString()
+new Date().toLocaleString()
+new Date().toLocaleDateString()
+new Date().toLocaleTimeString()
+new Date().toUTCString()
+new Date().toISOString() // YYYY-MM-DDTHH:mm:ss.sssZ or ±YYYYYY-MM-DDTHH:mm:ss.sssZ
+new Date().toJSON()
 ```
 
 ### String to timestamp (with ms precision loss to prevent timing attacks and fingerprinting)
@@ -106,13 +111,13 @@ function monthRange (stamp) {
   const m = date.getMonth();
 
   return {
-    startDate: new Date(y, m, 1),
-    endDate: new Date(y, m+1, 0)
+    startDate: new Date(y, m, 1).getTime(),
+    endDate: new Date(y, m+1, 0).getTime()
   }
 }
 ```
 
-### Outstanding js date time libs
+### Outstanding JS date & time libs
 
 - [Luxon](https://moment.github.io/luxon/#/?id=luxon)
 - [Day.js](https://day.js.org/)

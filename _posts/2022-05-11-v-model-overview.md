@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 基础篇：理解 v-model
+title: 理解 v-model
 date: 2022-05-11 22:59
 categories: vue
 ---
