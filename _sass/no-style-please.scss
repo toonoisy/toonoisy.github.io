@@ -1,9 +1,9 @@
 // user-defined colors
 $bodyBackground: #fff;
-$fontColor: #333;
+$fontColor: #222;
 $codeBackground: initial;
 $inlineCodeBackground: #ddd;
-$headingColor: #222;
+$headingColor: #111;
 $borderColor: #d0d5df;
 
 @mixin dark-appearance {
@@ -33,7 +33,7 @@ body {
   color: $fontColor;
   font-family: monospace;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 2;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
@@ -50,7 +50,7 @@ h2, h3, h4, h5, h6 {
 
 hr { margin: 2rem 0; }
 
-p { margin: 1rem 0; }
+p { margin: 1.5rem 0; }
 
 li { margin: 0.5rem 0; }
 
@@ -76,16 +76,17 @@ table, th, td {
   padding: 0.5rem;
 }
 
-pre, code {
+pre {
   font-family: Consolas, Monaco,'Andale Mono', 'Ubuntu Mono', monospace;
   background: $codeBackground;
-  border-radius: 5px;
 }
 
 code.language-plaintext {
   padding: 0 5px;
   background: $inlineCodeBackground;
 }
+
+pre, code.language-plaintext { border-radius: 5px; }
 
 div.highlighter-rouge code {
   display: block;

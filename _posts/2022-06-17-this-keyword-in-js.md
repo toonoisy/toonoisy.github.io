@@ -2,6 +2,7 @@
 layout: post
 title: 理解 JS 中的 this 关键字
 date: 2022-06-17 00:23
+categories: js
 ---
 
 ## 什么是 this

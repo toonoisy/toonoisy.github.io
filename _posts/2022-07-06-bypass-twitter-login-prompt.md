@@ -2,6 +2,7 @@
 layout: post
 title: Bypass Twitter Login Prompts
 date: 2022-07-06 20:14
+categories: ad_filters
 ---
 
 Getting sick of Twitter's forced login prompts, meanwhile having no intention to create an account? It's pretty easy to get rid of these annoying popups.

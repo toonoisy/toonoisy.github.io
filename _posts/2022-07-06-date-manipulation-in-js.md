@@ -2,6 +2,7 @@
 layout: post
 title: Date Manipulation in JS
 date: 2022-07-06 23:12
+categories: js
 ---
 ### Create a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object
 

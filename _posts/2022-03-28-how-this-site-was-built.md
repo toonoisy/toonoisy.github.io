@@ -2,6 +2,7 @@
 layout: post
 title: How This Site Was Built
 date: 2022-03-30 01:59
+categories: log
 ---
 
 Yet another personal site built on GitHub Pages with jekyll was born. This is an article about how I created this site step by step.

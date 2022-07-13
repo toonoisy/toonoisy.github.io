@@ -2,6 +2,7 @@
 layout: post
 title: Array Manipulation in JS
 date: 2022-07-10 19:54
+categories: js
 ---
 
 ### Create an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) object with certain length (of empty slots)
@@ -97,3 +98,4 @@ console.log(a[0].key) // 2
 ### Further Readings
 
 - [50 Essential Array Manipulation Methods for JS Devs (2022)](https://javascript.plainenglish.io/50-essential-array-methods-for-js-devs-2022-b3bfbbb7013e)
+

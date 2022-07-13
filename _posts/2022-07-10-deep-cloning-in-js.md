@@ -2,6 +2,7 @@
 layout: post
 title: Deep Cloning in JS
 date: 2022-07-10 20:16
+categories: js
 ---
 ### Flawed version
 

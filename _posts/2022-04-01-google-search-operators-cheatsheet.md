@@ -2,6 +2,7 @@
 layout: post
 title: Google Search Operators Cheatsheet
 date: 2022-04-01 19:04
+categories: notes
 ---
 
 | Operator      | Description                                                  | Example                                                      | State |
