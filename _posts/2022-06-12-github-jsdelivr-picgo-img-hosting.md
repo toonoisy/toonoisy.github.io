@@ -43,7 +43,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 ### 生成一个 token
 
-依次点击 GitHub 右上角个人头像 => Settings => Developer settings => Personal access tokens => Generate new token，填写描述：
+依次点击 GitHub 右上角个人头像 > Settings > Developer settings > Personal access tokens > Generate new token，填写描述：
 
 ![gh-new-personal-access-token](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-new-personal-access-token.jpg)
 

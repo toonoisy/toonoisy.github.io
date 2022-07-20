@@ -13,4 +13,9 @@ entries:
       show_more: true
       show_more_text: see archive...
       show_more_url: archive.html
+
+  - title: links
+    entries:
+      - title: "theme: <a href='https://github.com/riggraz/no-style-please'>no style please</a>"
+      - title: "favicon by: <a href='https://icons8.com'>Icons8</a>"
   

@@ -25,8 +25,10 @@ layout: default
 
   <li>
     <time>{{ post.date | date: '%Y-%m-%d %H:%M' }}</time>
-    <a href="{{ post.url | prepend: site.baseurl }}">[{{ post.categories }}] {{ post.title | escape }}</a>
-  </li>
+    <a href="{{ post.url | relative_url }}">
+      [{% for category in post.categories %}{{category}}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}]
+      {{ post.title }}
+    </a>
 
   {% if forloop.last %}
 </ul>

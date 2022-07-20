@@ -9,6 +9,8 @@ categories: vue
 
 Vue 使用 [`Object.defineProperty`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 为所有在 `data` 选项中声明的属性遍历添加 [getter/setter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#定义_getters_与_setters)，使其能在被访问或修改时通知组件对应的 `watcher` 实例。在组件进行渲染时，`watcher` 会将接触过的数据收集为依赖，之后当依赖项的 `setter` 触发时， `watcher` 收到通知就会重新渲染组件，从而实现数据和视图双向同步。
 
+![how-changes-are-tracked-in-vue](https://cn.vuejs.org/images/data.png)
+
 ## Vue2 官方文档中对 v-model 的介绍
 
 ### 1. 表单元素双向数据绑定
