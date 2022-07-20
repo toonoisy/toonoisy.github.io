@@ -1,5 +1,5 @@
 // user-defined colors
-$bodyBackground: #fff;
+$bodyBackground: #fdfdfd;
 $fontColor: #222;
 $codeBackground: initial;
 $inlineCodeBackground: #ddd;
@@ -13,6 +13,8 @@ $borderColor: #d0d5df;
 
     &.ioda { filter: invert(0); }
   }
+
+  .utterances { filter: invert(1); }
 }
 
 body[theme="dark"] { @include dark-appearance; }
@@ -32,8 +34,8 @@ html { height: 100%; }
 body {
   color: $fontColor;
   font-family: monospace;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.4;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
@@ -50,12 +52,19 @@ h2, h3, h4, h5, h6 {
 
 hr { margin: 2rem 0; }
 
-p { margin: 1.5rem 0; }
+p { 
+  margin: 1rem 0; 
+  a { text-decoration: none; }
+}
 
-li { margin: 0.5rem 0; }
+li { 
+  margin: 0.4rem 0;
+
+  p { margin: 0; }
+}
 
 .w {
-  max-width: 700px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
@@ -76,10 +85,7 @@ table, th, td {
   padding: 0.5rem;
 }
 
-pre {
-  font-family: Consolas, Monaco,'Andale Mono', 'Ubuntu Mono', monospace;
-  background: $codeBackground;
-}
+pre { background: $codeBackground; }
 
 code.language-plaintext {
   padding: 0 5px;
