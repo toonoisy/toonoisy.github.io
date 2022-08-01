@@ -24,10 +24,10 @@ layout: default
   {% endif %}
 
   <li>
-    <time>{{ post.date | date: '%Y-%m-%d %H:%M' }}</time>
+    <time>{{ post.date | date: site.theme_config.date_format }}</time>
     <a href="{{ post.url | relative_url }}">
-      {% for category in post.categories %}[{{category}}]{% unless forloop.last %}{% endunless %}{% endfor %}
-      {{ post.title }}
+      <!-- {% for category in post.categories %}[{{category}}]{% unless forloop.last %}{% endunless %}{% endfor %} -->
+      {{ post.title | downcase }}
     </a>
 
   {% if forloop.last %}

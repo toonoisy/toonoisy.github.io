@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pass Values Between HTML, JS, and CSS
+title: Pass Value Between HTML, JS, and CSS
 date: 2022-07-13 00:42
 categories: web_dev
 ---

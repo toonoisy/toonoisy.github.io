@@ -1,20 +1,17 @@
 // user-defined colors
 $bodyBackground: #fdfdfd;
-$fontColor: #222;
-$codeBackground: initial;
-$inlineCodeBackground: #ddd;
+$fontColor: #212529;
+$codeBackground: #f5f2f0;
 $headingColor: #111;
-$borderColor: #d0d5df;
+$borderColor: #ddd;
+$underlineColor: #0366d6;
 
 @mixin dark-appearance {
   filter: invert(1);
   img {
-    filter: invert(1);
-
+    filter: invert(1) brightness(.9);
     &.ioda { filter: invert(0); }
   }
-
-  .utterances { filter: invert(1); }
 }
 
 body[theme="dark"] { @include dark-appearance; }
@@ -33,7 +30,7 @@ html { height: 100%; }
 
 body {
   color: $fontColor;
-  font-family: monospace;
+  font-family: monospace, Menlo;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -50,17 +47,21 @@ h2, h3, h4, h5, h6 {
   color: $headingColor;
 }
 
+h2 { border-bottom: 1px solid $borderColor; }
+
 hr { margin: 2rem 0; }
 
-p { 
-  margin: 1rem 0; 
-  a { text-decoration: none; }
-}
+p { margin: 1rem 0; }
 
 li { 
   margin: 0.4rem 0;
 
   p { margin: 0; }
+}
+
+a { 
+  color: $headingColor;
+  text-decoration: underline $underlineColor; 
 }
 
 .w {
@@ -82,30 +83,26 @@ table { width: 100%; }
 table, th, td {
   border: 1px solid $borderColor;
   border-collapse: collapse;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
-pre { background: $codeBackground; }
-
-code.language-plaintext {
-  padding: 0 5px;
-  background: $inlineCodeBackground;
+code {
+  background: $codeBackground;
+  border: 1px solid $borderColor;
+  border-radius: 0.4rem;
+  padding: 0 0.4rem;
 }
-
-pre, code.language-plaintext { border-radius: 5px; }
 
 div.highlighter-rouge code {
   display: block;
   overflow-x: auto;
   white-space: pre-wrap;
   padding: 1rem;
-  color: $inlineCodeBackground;
-  border-radius: 5px;
 }
 
 blockquote {
   font-style: italic;
-  border-left: 5px solid $inlineCodeBackground;
+  border-left: 0.4rem solid $borderColor;
   padding: 1rem;
 
   p { margin: 0; }

@@ -161,8 +161,6 @@ const fn2 = obj.fn.bind(this, 1, 2);
 fn2(); // 输出 4
 ```
 
-同时推荐阅读这条 ESLint 示例： [no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)。
-
 ## 严格模式
 
 ES5 中引入的严格模式会改变一些代码的运行结果，例如：
@@ -190,3 +188,4 @@ Vue.js 中的 `this` 在符合预期的场景中指向调用它的 Vue 实例。
 - [事件处理中的this：attachEvent, addEventListener, onclick](https://harttle.land/2015/08/14/event-and-this.html)
 - [为什么 Vue2 this 能够直接获取到 data 和 methods](https://chinese.freecodecamp.org/news/why-this-in-vue2-can-get-data-and-methods-directly/#:~:text=%E9%80%9A%E8%BF%87%20this%20%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%88%B0%20data%20%E9%87%8C%E9%9D%A2%E7%9A%84%E6%95%B0%E6%8D%AE%E7%9A%84,%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%A5%BD%E5%A4%84%E5%9C%A8%E4%BA%8E%E4%BE%BF%E4%BA%8E%E8%8E%B7%E5%8F%96%E3%80%82)
 - [Vue开发中为什么需要对箭头函数保持警惕](https://smartline.cc/arrow-function-in-vue/#Vue_this)
+-  [no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)
