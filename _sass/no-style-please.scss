@@ -1,12 +1,20 @@
-// user-defined colors
-$bodyBackground: #fdfdfd;
-$fontColor: #212529;
-$codeBackground: #f5f2f0;
-$headingColor: #111;
-$borderColor: #ddd;
-$underlineColor: #0366d6;
+:root {
+  --bodyBackground: #fdfdfd;
+  --fontColor: #212529;
+  --codeBackground: #f5f2f0;
+  --headingColor: #111;
+  --borderColor: #ddd;
+  --underlineColor: #0366d6;
+}
 
+/*
+Q: why change --bodyBackground manually?
+A: safari uses the background-color of body tag for the theme-color
+Q: won't it be inverted? 
+A: no, it won't. see: https://stackoverflow.com/a/61265706
+*/
 @mixin dark-appearance {
+  --bodyBackground: #020202;
   filter: invert(1);
   img {
     filter: invert(1) brightness(.9);
@@ -21,16 +29,12 @@ body[theme="dark"] { @include dark-appearance; }
   body[theme="auto"] { @include dark-appearance; }
 }
 
-// bg color is also needed in html in order to
-// block body's background propagation
-// see: https://stackoverflow.com/a/61265706
-html, body { background: $bodyBackground; }
-
 html { height: 100%; }
 
 body {
-  color: $fontColor;
-  font-family: monospace, Menlo;
+  background: var(--bodyBackground);
+  color: var(--fontColor);
+  font-family: Courier, monospace;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -40,14 +44,14 @@ body {
 
 .post-meta { text-align: right; }
 
-h1 { color: $headingColor }
+h1 { color: var(--headingColor) }
 
 h2, h3, h4, h5, h6 { 
   margin-top: 3rem; 
-  color: $headingColor;
+  color: var(--headingColor);
 }
 
-h2 { border-bottom: 1px solid $borderColor; }
+h2 { border-bottom: 1px solid var(--borderColor); }
 
 hr { margin: 2rem 0; }
 
@@ -60,8 +64,8 @@ li {
 }
 
 a { 
-  color: $headingColor;
-  text-decoration: underline $underlineColor; 
+  color: var(--headingColor);
+  text-decoration-color: var(--underlineColor); 
 }
 
 .w {
@@ -81,14 +85,15 @@ hr {
 table { width: 100%; }
 
 table, th, td {
-  border: 1px solid $borderColor;
+  border: 1px solid var(--borderColor);
   border-collapse: collapse;
   padding: 0.4rem;
 }
 
 code {
-  background: $codeBackground;
-  border: 1px solid $borderColor;
+  font-family: Courier, monospace;
+  background: var(--codeBackground);
+  border: 1px solid var(--borderColor);
   border-radius: 0.4rem;
   padding: 0 0.4rem;
 }
@@ -102,7 +107,7 @@ div.highlighter-rouge code {
 
 blockquote {
   font-style: italic;
-  border-left: 0.4rem solid $borderColor;
+  border-left: 0.4rem solid var(--borderColor);
   padding: 1rem;
 
   p { margin: 0; }
