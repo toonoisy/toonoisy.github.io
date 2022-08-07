@@ -1,8 +1,8 @@
 :root {
   --bodyBackground: #fdfdfd;
-  --fontColor: #212529;
+  --fontColor: #3c3c3c;
   --codeBackground: #f5f2f0;
-  --headingColor: #111;
+  --headingColor: #363636;
   --borderColor: #ddd;
   --underlineColor: #0366d6;
 }
@@ -47,7 +47,7 @@ body {
 h1 { color: var(--headingColor) }
 
 h2, h3, h4, h5, h6 { 
-  margin-top: 3rem; 
+  margin-top: 2rem; 
   color: var(--headingColor);
 }
 
@@ -92,6 +92,7 @@ table, th, td {
 
 code {
   font-family: Courier, monospace;
+  font-size: 95%;
   background: var(--codeBackground);
   border: 1px solid var(--borderColor);
   border-radius: 0.4rem;
