@@ -9,7 +9,7 @@ categories: vue
 
 ### Event Loop
 
-说 `Vue.nextTick` 之前，首先要<a href="./js-event-loop.html">理解 JS 事件循环机制</a>，它是 JS 程序的消息派发机制，负责在主线程调用栈闲置时，从任务队列中取出最早的任务加入调用栈中，等该任务执行完毕，就算完成了一轮事件循环，也叫走完一个 "tick"。
+说 `Vue.nextTick` 之前，首先要<a href="./js-event-loop.html">理解 JS 事件循环机制</a>，它是 JS 程序的消息派发机制，负责在主线程调用栈闲置时，从任务队列中取出最早的任务加入调用栈中，等到该任务执行完毕，就算完成了一轮事件循环，也叫走完一个 "tick"。
 
 任务队列中的任务又被叫做“宏任务”，主线程执行任务时，往往还会生成一些“微任务”，当前任务处理完毕后，要将现存的微任务也一并清空，此时浏览器才有机会执行页面渲染。
 
@@ -19,7 +19,7 @@ categories: vue
 
 ### Vue 的响应式系统
 
-简而言之，Vue 使用 `Object.defineProperty` 为所有在 `data` 选项中声明的属性递归添加 getter/setter，读取数据触发 getter 时，该数据的发布者 `dep` 会将对应的组件 `watcher` 添加为订阅者，修改数据触发 setter 时，又是由 `dep` 通知所有订阅的 `watcher` 重新渲染视图。
+简而言之，Vue 使用 `Object.defineProperty` 为所有在 `data` 选项中声明的属性递归添加 getter/setter，读取数据触发 getter 时，该数据的发布者 `dep` 会将对应的组件 `watcher` 添加为订阅者，修改数据触发 setter 时，也是由 `dep` 通知所有订阅的 `watcher` 重新渲染视图。
 
 ## Vue 的异步更新队列
 
@@ -77,7 +77,6 @@ export function queueWatcher (watcher: Watcher) {
     }
   }
 }
-
 ```
 
 进入 `nextTick`  之前我们最后看一下 `flushSchedulerQueue`，也就是刷新 `watcher` 队列，触发 `watcher` 更新的方法，它同样定义在 [scheduler.js](https://github.com/vuejs/vue/blob/65a333fcb43737c73a66a088cea17361963e5f66/src/core/observer/scheduler.js#L71)。
@@ -186,11 +185,12 @@ export function nextTick (cb?: Function, ctx?: Object) {
 let timerFunc // 用来实现异步的函数，使传入的 flushCallbacks 延迟运行
 
 if (typeof Promise !== 'undefined' && isNative(Promise)) {
-  const p = Promise.resolve()
   // 方案一，首选原生 Promise.then 创建微任务
+  const p = Promise.resolve()
   timerFunc = () => {
     p.then(flushCallbacks)
-    if (isIOS) setTimeout(noop) // 处理 iOS >= 9.3.3 环境下 Promise.then 存在的 bug
+    // 处理 iOS >= 9.3.3 环境下 Promise.then 存在的 bug
+    if (isIOS) setTimeout(noop)
   }
   isUsingMicroTask = true
 } else if (!isIE && typeof MutationObserver !== 'undefined' && (
@@ -211,7 +211,7 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   isUsingMicroTask = true
 } else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
   // 方案三，使用 setImmediate 创建宏任务
-  // 本轮事件循环结束后即可执行，无需在任务队列中排队等候
+  // 下一轮事件循环即可执行，无需在任务队列中排队等候
   timerFunc = () => {
     setImmediate(flushCallbacks)
   }

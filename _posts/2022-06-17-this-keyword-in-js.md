@@ -37,7 +37,7 @@ obj.fn(); // 输出 2，this 指向 obj
 - 创建一个空的 JS 对象
 - 将此对象的 `__proto__` 属性指向其构造函数的 `prototype` 属性
 - 运行该构造函数内的代码，并将运行时的 `this` 指向刚才创建的对象
-- 如果该构造函数的有显式返回值，且该值是引用数据类型，那么该值就是整个 `new` 表达式的返回结果，否则 `new` 表达式会返回之前创建的对象
+- 如果该构造函数有显式返回值，且该值是引用数据类型，那么该值就是整个 `new` 表达式的返回结果，否则 `new` 表达式会返回之前创建的对象
 
 ```js
 function MacBook (year, color) {
@@ -186,6 +186,5 @@ Vue.js 中的 `this` 在符合预期的场景中指向调用它的 Vue 实例。
 - [JavaScript 的 this 原理](https://www.ruanyifeng.com/blog/2018/06/javascript-this.html)
 - [Constructor, operator "new"](https://javascript.info/constructor-new)
 - [事件处理中的this：attachEvent, addEventListener, onclick](https://harttle.land/2015/08/14/event-and-this.html)
-- [为什么 Vue2 this 能够直接获取到 data 和 methods](https://chinese.freecodecamp.org/news/why-this-in-vue2-can-get-data-and-methods-directly/#:~:text=%E9%80%9A%E8%BF%87%20this%20%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%88%B0%20data%20%E9%87%8C%E9%9D%A2%E7%9A%84%E6%95%B0%E6%8D%AE%E7%9A%84,%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%A5%BD%E5%A4%84%E5%9C%A8%E4%BA%8E%E4%BE%BF%E4%BA%8E%E8%8E%B7%E5%8F%96%E3%80%82)
-- [Vue开发中为什么需要对箭头函数保持警惕](https://smartline.cc/arrow-function-in-vue/#Vue_this)
+- [为什么 Vue2 this 能够直接获取到 data 和 methods](https://chinese.freecodecamp.org/news/why-this-in-vue2-can-get-data-and-methods-directly)
 -  [no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)

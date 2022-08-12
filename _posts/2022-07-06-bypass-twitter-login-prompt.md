@@ -7,7 +7,7 @@ categories: ad_filters
 
 Getting sick of Twitter's forced login prompts, meanwhile having no intention to create an account? It's pretty easy to get rid of these annoying popups.
 
-If you are browsing Twitter on desktop using Chrome, simply run below in the console(Command+Option+J on Mac or Ctrl+Shift+J on Windows to open it):
+If you are browsing Twitter on desktop using Chrome, simply run below in the console (Command+Option+J on Mac or Ctrl+Shift+J on Windows to open it):
 
 ```js
 $('html').style.overflow = 'scroll';

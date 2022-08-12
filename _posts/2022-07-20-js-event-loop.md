@@ -53,6 +53,8 @@ JS 引擎运行代码的原则是，遇到同步代码直接执行，碰到异�
 
 但如果任务迟迟没有执行完毕，页面就会被挂起。所以出现页面无法响应的时候，说明有存在大量计算行为的代码阻塞了事件循环。
 
+![event-loop](https://javascript.info/article/event-loop/eventLoop-full.svg)
+
 ## 输出示例
 
 ```js

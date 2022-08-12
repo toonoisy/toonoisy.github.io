@@ -12,19 +12,16 @@ Assuming we would like to right click any folder on macOS Finder to open it with
 Spotlight search "Automator.app", once opened it,
 
 - choose "Quick Action" > "Utilities" > "Run Shell Script"
-
 - select workflow receives current "folders" in "Finder.app"
-
 - set pass input "as arguments"
-
 - insert below script, and finally Ctrl+S to save it
 
-  ```shell
-  for f in "$@"
-  do
-  	open -a "Visual Studio Code" "$f"
-  done
-  ```
+```shell
+for f in "$@"
+do
+	open -a "Visual Studio Code" "$f"
+done
+```
 
 ![quick-action-open-with-code](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/quick-action-open-with-code.png)
 

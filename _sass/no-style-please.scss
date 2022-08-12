@@ -1,42 +1,38 @@
 :root {
-  --bodyBackground: #fdfdfd;
-  --fontColor: #3c3c3c;
-  --codeBackground: #f5f2f0;
-  --headingColor: #363636;
+  --bodyBackground: #fff;
+  --fontColor: #333;
+  --codeBackground: #f1efee;
+  --codeColor: #68615e;
   --borderColor: #ddd;
-  --underlineColor: #0366d6;
+  --anchorColor: #3257d1;
 }
 
-/*
-Q: why change --bodyBackground manually?
-A: safari uses the background-color of body tag for the theme-color
-Q: won't it be inverted? 
-A: no, it won't. see: https://stackoverflow.com/a/61265706
-*/
 @mixin dark-appearance {
-  --bodyBackground: #020202;
-  filter: invert(1);
+  filter: invert(.9);
   img {
-    filter: invert(1) brightness(.9);
+    filter: invert(.9);
     &.ioda { filter: invert(0); }
   }
 }
 
 body[theme="dark"] { @include dark-appearance; }
 
-
 @media (prefers-color-scheme: dark) {
   body[theme="auto"] { @include dark-appearance; }
 }
 
+// bg color is also needed in html in order to
+// block body's background propagation
+// see: https://stackoverflow.com/a/61265706
+html, body { background: var(--bodyBackground); }
+
 html { height: 100%; }
 
 body {
-  background: var(--bodyBackground);
   color: var(--fontColor);
-  font-family: Courier, monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.75;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
@@ -44,28 +40,15 @@ body {
 
 .post-meta { text-align: right; }
 
-h1 { color: var(--headingColor) }
+a { color: var(--anchorColor); }
 
-h2, h3, h4, h5, h6 { 
-  margin-top: 2rem; 
-  color: var(--headingColor);
+article {
+  h2 { border-bottom: 1px solid var(--borderColor); }
 }
 
-h2 { border-bottom: 1px solid var(--borderColor); }
-
-hr { margin: 2rem 0; }
-
-p { margin: 1rem 0; }
-
-li { 
-  margin: 0.4rem 0;
-
-  p { margin: 0; }
-}
-
-a { 
-  color: var(--headingColor);
-  text-decoration-color: var(--underlineColor); 
+.menu {
+  padding-left: 1rem;
+  ul { padding-left: 1rem; }
 }
 
 .w {
@@ -77,6 +60,7 @@ a {
 hr {
   text-align: center;
   border: 0;
+  margin: 2rem 0;
 
   &:before { content: '/////' }
   &:after { content: attr(data-content) '/////' }
@@ -90,26 +74,24 @@ table, th, td {
   padding: 0.4rem;
 }
 
-code {
-  font-family: Courier, monospace;
-  font-size: 95%;
-  background: var(--codeBackground);
-  border: 1px solid var(--borderColor);
-  border-radius: 0.4rem;
+code.language-plaintext {
   padding: 0 0.4rem;
+  color: var(--codeColor);
+  background: var(--codeBackground);
 }
 
 div.highlighter-rouge code {
   display: block;
   overflow-x: auto;
   white-space: pre-wrap;
-  padding: 1rem;
 }
 
 blockquote {
   font-style: italic;
-  border-left: 0.4rem solid var(--borderColor);
-  padding: 1rem;
+  border-left: 0.3rem solid var(--borderColor);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: var(--codeColor);
 
   p { margin: 0; }
 }

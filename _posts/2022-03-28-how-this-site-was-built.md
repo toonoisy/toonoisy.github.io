@@ -44,9 +44,7 @@ Create a public GitHub repository named username.github.io and clone it to local
 - Where to find free Jekyll themes
 
   - [http://jekyllthemes.org/](http://jekyllthemes.org/)
-
   - [https://jekyll-themes.com/free/](https://jekyll-themes.com/free/)
-
   - [https://jamstackthemes.dev/#ssg=jekyll](https://jamstackthemes.dev/#ssg=jekyll)
 
   I made my pick: [http://jekyllthemes.org/themes/no-style-please/](http://jekyllthemes.org/themes/no-style-please/)
