@@ -96,11 +96,11 @@ v2ray uninstall # 卸载 V2Ray
 
 安装成功后，点击顶部栏图标，选择 Configure 进入配置界面，即可手填或导入配置：
 
-![v2ray-client-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.jpg)
+[![v2ray-client-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.jpg)
 
 最省事的导入方法选 “Import from standard share links”，把之前生成的 vmess url 拷贝粘贴进去确认即可，有机率会导入失败，可以多试几次。
 
-![v2ray-client-config-import](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.jpg)
+[![v2ray-client-config-import](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.jpg)
 
 成功后可在 Server 选项中看到刚才添加的配置，此时选择偏好的代理模式，点击 Load core 连接后即可畅游互联网。
 

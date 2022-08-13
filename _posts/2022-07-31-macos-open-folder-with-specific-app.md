@@ -23,7 +23,7 @@ do
 done
 ```
 
-![quick-action-open-with-code](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/quick-action-open-with-code.png)
+[![quick-action-open-with-code](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/quick-action-open-with-code.png)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/quick-action-open-with-code.png)
 
 Now get back to Finder > right click a folder > choose "Quick Actions", then we can see the item we just created appears on the menu, give it a go.
 

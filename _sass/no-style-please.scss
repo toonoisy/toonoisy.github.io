@@ -1,5 +1,6 @@
 :root {
-  --bodyBackground: #fff;
+  --bodyBackground: initial;
+  --darkBodyBackground: #191919;
   --fontColor: #333;
   --codeBackground: #f1efee;
   --codeColor: #68615e;
@@ -8,9 +9,11 @@
 }
 
 @mixin dark-appearance {
+  // safari uses the background-color of body tag for the theme-color
+  --bodyBackground: var(--darkBodyBackground);
   filter: invert(.9);
   img {
-    filter: invert(.9);
+    filter: invert(1);
     &.ioda { filter: invert(0); }
   }
 }
@@ -51,10 +54,20 @@ article {
   ul { padding-left: 1rem; }
 }
 
+.toggler { 
+  font-size: 25px; 
+  text-decoration: none;
+}
+
+.func {
+  display: flex;
+  justify-content: space-between;
+}
+
 .w {
   max-width: 640px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem;
 }
 
 hr {

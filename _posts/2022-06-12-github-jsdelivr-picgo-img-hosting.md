@@ -45,7 +45,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 依次点击 GitHub 右上角个人头像 > Settings > Developer settings > Personal access tokens > Generate new token，填写描述：
 
-![gh-new-personal-access-token](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-new-personal-access-token.jpg)
+[![gh-new-personal-access-token](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-new-personal-access-token.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-new-personal-access-token.jpg)
 
 - **Note** 中填写 token 的用途
 - **Expiration** 是令牌有效时间，过期前 Github 会发邮件提醒延长有效期
@@ -63,7 +63,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 以 macOS 为例，安装成功后**双击**顶部栏图标，然后依次点击 打开详细窗口 => 图床设置 => GitHub 图床，填写配置：
 
-![picgo-gh-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/picgo-gh-config.jpg)
+[![picgo-gh-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/picgo-gh-config.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/picgo-gh-config.jpg)
 
 - **设定仓库名称**：格式为“GitHub 用户名/仓库名”
 - **设定分支名**：如果创建仓库后没有新增或修改分支，那么默认是 main
@@ -86,7 +86,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 点击 Draft a new release 创建新的 release，每次发布要使用一个新的 tag：
 
-![gh-publish-new-release](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-publish-new-release.jpg)
+[![gh-publish-new-release](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-publish-new-release.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/gh-publish-new-release.jpg)
 
 有多个 releases 的时候就可以按版本区别资源了，即使有资源后续被删除，也可以通过旧版本号访问。
 

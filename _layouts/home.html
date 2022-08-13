@@ -4,7 +4,8 @@ layout: default
 <header>
   <h1>
     {{ site.title }}
-    <a href="javascript:;" class="toggler"" onclick="toggleTheme()">⌥</a>
+    <span>{%-include toggler.html-%}</span>
+    <!-- <a href="javascript:;" class="toggler"" onclick="toggleTheme()">⌥</a> -->
   </h1>
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
@@ -15,4 +16,4 @@ layout: default
 
 {{ content }}
 
-<script type="text/javascript" src="../assets/js/theme_switch.js" /></script>
+<!-- <script type="text/javascript" src="../assets/js/theme_switch.js" /></script> -->
