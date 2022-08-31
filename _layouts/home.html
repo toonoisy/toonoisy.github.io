@@ -2,11 +2,10 @@
 layout: default
 ---
 <header>
-  <h1>
-    {{ site.title }}
-    <span>{%-include toggler.html-%}</span>
-    <!-- <a href="javascript:;" class="toggler"" onclick="toggleTheme()">⌥</a> -->
-  </h1>
+  <div class="func">
+    <h1>{{ site.title }}</h1>
+    <div>{%-include toggler.html-%}</div>
+  </div>
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
@@ -15,5 +14,3 @@ layout: default
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
-
-<!-- <script type="text/javascript" src="../assets/js/theme_switch.js" /></script> -->

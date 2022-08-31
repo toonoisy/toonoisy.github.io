@@ -53,7 +53,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/go.sh)
 
 显示以下信息代表配置成功，可按提示生成 url 或二维码，配置客户端时使用：
 
-![v2ray-config-success](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-config-success.jpg)
+[![v2ray-config-success](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-config-success.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-config-success.jpg)
 
 刚才执行的脚本自动安装了 [BBR 加速](https://cloud.google.com/blog/products/networking/tcp-bbr-congestion-control-comes-to-gcp-your-internet-just-got-faster)，可执行以下命令查看，有返回则代表 BBR 运行成功：
 
