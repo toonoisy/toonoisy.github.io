@@ -6,6 +6,10 @@
   --codeColor: #68615e;
   --borderColor: #ddd;
   --anchorColor: #3257d1;
+  --siteTitleSize: 32px;
+  --steps: 10;
+  --duration: 2.5s;
+  --cursorSize: 10px;
 }
 
 @mixin dark-appearance {
@@ -62,6 +66,7 @@ article {
 .func {
   display: flex;
   justify-content: space-between;
+  margin: 1rem 0;
 }
 
 .w {
@@ -113,4 +118,63 @@ img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.go {
+  position: relative;
+  display: inline-block;
+  font-size: var(--siteTitleSize);
+  line-height: .8;
+}
+
+.go::before {
+  content: '';
+  width: 100%;
+  height: var(--siteTitleSize);
+  z-index: 1;
+  position: absolute;
+  background: linear-gradient(#fff, #fff) no-repeat top right;
+  background-size: 0 100%;
+  animation: showText var(--duration) steps(var(--steps)) forwards;
+}
+
+.go::after {
+  content: '';
+  width: var(--cursorSize);
+  height: var(--siteTitleSize);
+  background-color: black;
+  z-index: 2;
+  position: absolute;
+  animation: moveCursor var(--duration) steps(var(--steps)) forwards,
+    blink 1s var(--duration) step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes moveCursor {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes showText {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 0% 100%;
+  }
 }
