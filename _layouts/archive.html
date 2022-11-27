@@ -6,9 +6,10 @@ title: archive
 
 <div class="func">
   {%-include back_link.html-%}
-  {%-include toggler.html-%}
+  <!-- {%-include toggler.html-%} -->
 </div>
 
+<div class="menu">
 <h1>{{ page.title }}</h1>
 
 {% if page.which_category %}
@@ -29,14 +30,15 @@ title: archive
   {% endif %}
 
   <li>
-    <time>{{ post.date | date: site.theme_config.date_format }}</time>
     <a href="{{ post.url | relative_url }}">
       <!-- {% for category in post.categories %}[{{category}}]{% unless forloop.last %}{% endunless %}{% endfor %} -->
       {{ post.title | downcase }}
     </a>
+    <time>{{ post.date | date: site.theme_config.date_format }}</time>
 
   {% if forloop.last %}
 </ul>
+</div>
 {% endif %}
 
 {% capture prev_year %}{{ year }}{% endcapture %}

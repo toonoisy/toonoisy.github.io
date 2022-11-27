@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Google Search Operators Cheatsheet
-date: 2022-04-01 19:04
-categories: notes
+date: 2022-04-01 19:04 +0800
+categories: [notes, lang:en]
 ---
 
 | Operator      | Description                                                  | Example                                                      | State |
@@ -40,7 +40,7 @@ categories: notes
 | loc:placename | Find results from a given area. <br />**SIDENOTE**: Not officially deprecated, but results are inconsistent. | **[loc:”san francisco” apple](https://www.google.com/search?q=loc%3A"san+francisco"+apple)** | ?     |
 | location:     | Find news from a certain location in Google News.<br />**SIDENOTE**: Not officially deprecated, but results are inconsistent. | **[loc:”san francisco” apple](https://www.google.com/search?q=loc%3A"san+francisco"+apple)** | ?     |
 
+---
 
-
-**Source:** **[Google Search Operators: The Complete List (42 Advanced Operators)](https://ahrefs.com/blog/google-advanced-search-operators/)**
+Source: [Google Search Operators: The Complete List (42 Advanced Operators)](https://ahrefs.com/blog/google-advanced-search-operators/)
 

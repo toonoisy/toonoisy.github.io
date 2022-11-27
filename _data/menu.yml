@@ -2,7 +2,7 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
+  - title: 
     entries:
       - title: about
         url: about
@@ -10,12 +10,17 @@ entries:
   - title: posts
     post_list:
       limit: 5
-      show_more: true
+      show_more: false
       show_more_text: see archive...
       show_more_url: archive
 
-  - title: links
+  - title: 
     entries:
-      - title: "theme based on: <a href='https://github.com/riggraz/no-style-please' target='_blank'>no style please</a>"
-      - title: "favicon by: <a href='https://icons8.com' target='_blank'>Icons8</a>"
+      - title: see archive...
+        url: archive
+
+  # - title: links
+  #   entries:
+  #     - title: "theme based on: <a href='https://github.com/riggraz/no-style-please' target='_blank'>no style please</a>"
+  #     - title: "favicon by: <a href='https://icons8.com' target='_blank'>Icons8</a>"
   

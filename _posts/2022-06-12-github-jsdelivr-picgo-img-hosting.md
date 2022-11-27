@@ -1,13 +1,9 @@
 ---
 layout: post
 title: Github + jsDelivr + PicGo 搭建图床
-date: 2022-06-12 19:02
-categories: cdn
+date: 2022-06-12 19:02 +0800
+categories: [notes, lang:zh]
 ---
-## 前言
-
-拿自己写博客来说，博客长期经营下去，会不可避免地累积一些博文配图，使用 Github + jsDelivr + PicGo 搭建一个免费图床，不仅可以对这些图片资源进行专门管理，还能够优化网站资源访问速度。
-
 ## jsDelivr 介绍
 
 [jsDelivr](https://www.jsdelivr.com/) 是一款免费的开源 CDN 服务，目前支持 npm、GitHub、WordPress 三个站点的资源访问加速，在全球范围内（含中国大陆）拥有超过750个节点。
@@ -61,7 +57,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 ### 图床设置
 
-以 macOS 为例，安装成功后**双击**顶部栏图标，然后依次点击 打开详细窗口 => 图床设置 => GitHub 图床，填写配置：
+以 macOS 为例，安装成功后**双击**顶部栏图标，然后依次点击 打开详细窗口 > 图床设置 > GitHub 图床，填写配置：
 
 [![picgo-gh-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/picgo-gh-config.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/picgo-gh-config.jpg)
 
@@ -80,7 +76,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 - 仓库不可上传同名文件，为了避免重名，可以在 PicGo 设置中开启“上传前重命名”或“时间戳重命名”，两者都会**默认用时间戳重命名**，前者上传前还可以再修改一次
 - 在 PicGo 相册中移除图片不会将其从仓库中移除，请使用 git 管理仓库，或直接在仓库中预览该文件并执行删除
 
-## 可选：使用 Releases 管理不同版本的资源
+## 使用 Releases 管理不同版本的资源
 
 前面提到 jsDelivr 是可以通过不同版本号访问资源的。访问创建的仓库，点击侧边栏的 Releases 即可管理或发表版本。
 
@@ -92,7 +88,7 @@ https://cdn.jsdelivr.net/gh/jquery/jquery/
 
 该方案适合资源频繁更新的项目，如果仅存放几乎不需要更新的静态资源，通常不需要如此繁琐的操作。
 
-## References
+## 参考 & 拓展阅读
 
 - [Github+jsDelivr+PicGo 打造稳定快速、高效免费图床](https://blog.csdn.net/qq_36759224/article/details/98058240)
 - [免费CDN：jsDelivr+Github 使用方法](https://blog.csdn.net/qq_36759224/article/details/86936453)

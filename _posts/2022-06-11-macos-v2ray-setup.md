@@ -1,8 +1,8 @@
 ---
 layout: post
 title: macOS 搭建 V2Ray
-date: 2022-06-11 22:45
-categories: v2ray
+date: 2022-06-11 22:45 +0800
+categories: [notes, lang:zh]
 ---
 
 ## 前言
@@ -96,11 +96,11 @@ v2ray uninstall # 卸载 V2Ray
 
 安装成功后，点击顶部栏图标，选择 Configure 进入配置界面，即可手填或导入配置：
 
-[![v2ray-client-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.jpg)
+[![v2ray-client-config](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.png)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config.png)
 
 最省事的导入方法选 “Import from standard share links”，把之前生成的 vmess url 拷贝粘贴进去确认即可，有机率会导入失败，可以多试几次。
 
-[![v2ray-client-config-import](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.jpg)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.jpg)
+[![v2ray-client-config-import](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.png)](https://cdn.jsdelivr.net/gh/toonoisy/asset-hosting/img/v2ray-client-config-import.png)
 
 成功后可在 Server 选项中看到刚才添加的配置，此时选择偏好的代理模式，点击 Load core 连接后即可畅游互联网。
 
@@ -126,7 +126,7 @@ enabled = true
 systemctl restart fail2ban
 ```
 
-## References
+## 参考 & 拓展阅读
 
 - [2022最新V2Ray搭建图文教程，V2Ray一键搭建脚本](https://www.itblogcn.com/article/406.html)
 - [十分钟搭建，史上最全梯子教程](https://fileem.com/how-can-the-shadowsocket-ladder-not-be-used-2-5-knives-a-month-try-to-build-a-ladder-with-v2ray-ten-minutes-to-build-the-most-complete-ladder-tutorial-in-history)

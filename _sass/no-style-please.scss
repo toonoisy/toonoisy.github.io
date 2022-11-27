@@ -3,7 +3,7 @@
   --darkBodyBackground: #191919;
   --fontColor: #2a2a2a;
   --codeBackground: #f1efee;
-  --codeColor: #68615e;
+  --quoteColor: #68615e;
   --borderColor: #ddd;
   --anchorColor: #3257d1;
   --siteTitleSize: 32px;
@@ -22,10 +22,21 @@
   }
 }
 
+.utterances {
+  margin-top: 100px;
+}
+
 body[theme="dark"] { @include dark-appearance; }
 
 @media (prefers-color-scheme: dark) {
   body[theme="auto"] { @include dark-appearance; }
+}
+
+@media screen and (max-width: 600px) {
+  div pre code {
+    overflow-x: auto;
+    white-space: pre;
+  }
 }
 
 // bg color is also needed in html in order to
@@ -37,8 +48,8 @@ html { height: 100%; }
 
 body {
   color: var(--fontColor);
-  font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
   line-height: 1.75;
   margin: 0;
   min-height: 100%;
@@ -47,32 +58,37 @@ body {
 
 .post-meta { text-align: right; }
 
+.post-categories { font-size: 18px; }
+
 a { color: var(--anchorColor); }
 
-article {
-  h2 { border-bottom: 1px solid var(--borderColor); }
+p { margin-bottom: 1.5rem; }
+
+.menu, .page-layout {
+  text-align: center;
+  ul {
+    list-style: none;
+    padding-left: 0; 
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
-.menu {
-  padding-left: 1rem;
-  ul { padding-left: 1rem; }
-}
+header { text-align: center; }
 
-.toggler { 
-  font-size: 25px; 
-  text-decoration: none;
-}
+.toggler { text-decoration: none; }
 
 .func {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0;
 }
 
 .w {
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 1rem;
 }
 
 hr {
@@ -92,16 +108,20 @@ table, th, td {
   padding: 0.4rem;
 }
 
-code.language-plaintext {
-  padding: 0 0.4rem;
-  color: var(--codeColor);
-  background: var(--codeBackground);
+code {
+  font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
+  &.hljs {
+    color: var(--fontColor);
+  }
 }
 
-div.highlighter-rouge code {
-  display: block;
-  overflow-x: auto;
-  white-space: pre-wrap;
+pre code { white-space: pre-wrap; }
+
+code.language-plaintext {
+  border-radius: 5px;
+  padding: 0 0.3rem;
+  background: var(--codeBackground);
 }
 
 blockquote {
@@ -109,7 +129,7 @@ blockquote {
   border-left: 0.3rem solid var(--borderColor);
   padding-left: 1rem;
   margin: 0;
-  color: var(--codeColor);
+  color: var(--quoteColor);
 
   p { margin: 0; }
 }
